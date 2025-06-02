@@ -1,4 +1,10 @@
 void main() {
+  /*Operadores lógicos: 
+  "&&" => Retorna true somente se as duas expressões forem true
+  "||" => Retorna true se pelo menos uma das expressões for true.
+  "!"  => Inverte o valor lógico (se for true, vira false, e vice-versa)
+  
+  */
   Sessoes cliente = Sessoes();
   /*Info pessoa */
   cliente.nome = "Maria";

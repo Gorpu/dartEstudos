@@ -1,3 +1,5 @@
+import 'dart:io';
+
 void main() {
   //final => Uma vez que a variavel recebe um valor ele
   //não muda até que o programa seja executado novamente
@@ -34,3 +36,27 @@ void main() {
 //  return "Dart 10";
 //}
 String getValor() => "Dart 10";
+
+void main2() {
+  final meusObjetosAdd = [];
+  // Os valores passados para dentro da lista podem mudar,
+  // mas não posso recriar a lista manualmente.
+  // Se eu usar "const", ocorrerá um erro, pois o "const" não
+  // permite reatribuição. Ele funciona de forma totalmente estática.
+
+  // Nota adicional:
+  // Segundo o canal Washington Developer (https://youtu.be/xLL6h4CiHcI?si=70BJclV518Mkxoh6&t=851),
+  // o "const" é mais rápido por ser totalmente imutável em todos os aspectos.
+
+  bool continuar = true;
+  while (continuar == true) {
+    print("Adcionar objetos\n(digite stop para sair): ");
+    var varUserInput = stdin.readLineSync();
+    if (varUserInput == "stop") {
+      continuar = false;
+    } else {
+      meusObjetosAdd.add(varUserInput);
+      print(meusObjetosAdd);
+    }
+  }
+}

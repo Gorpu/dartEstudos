@@ -1,8 +1,17 @@
 import 'dart:io';
+/*
+  ==	Igualdade
+  !=	Diferença
+  >	  Maior que
+  <	  Menor que
+  >=	Maior ou igual
+  <=	Menor ou igual
+  !   Negação
+*/
 
 void main() {
-  print("O tipo num é int: ${num is int}");
-  print("O numero 10 não é um int: ${10 is! int}");
+  print("Toda String é um Object: ${String is Object}");
+  print("Nem todo Object é uma String: ${Object is! String}");
 
   dynamic pessoa = Trabalho();
   print("""

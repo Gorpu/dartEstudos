@@ -15,6 +15,7 @@ void main() {
   print("$num2");
 
   //verificação de tipo
+  // ignore: unnecessary_type_check
   print("(1 + 2.0) is double : ${(1 + 2.0) is double}");
   print("2.4 is int : ${2.4 is int}");
 }

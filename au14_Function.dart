@@ -39,8 +39,5 @@ void main() {
     print("" * 5000);
 
     //Função Lambda ou anonima
-    Map<String, int> Function(String, int) meuCADASTRO = (p0, p1) => {p0: p1};
-
-    print(meuCADASTRO("20", 6));
   }
 }
