@@ -1,17 +1,29 @@
-class Funcionarios {
-  late final String nome;
+class Aluguel {
+  late String nome;
+  late String sobrenome;
 
-  Funcionarios.cadastrar(String nome) {
+  String get getNome {
+    return this.nome;
+  }
+
+  set setNome(String nome) {
     this.nome = nome;
+  }
+
+  set setSobrenome(String sobrenome) {
+    this.sobrenome = sobrenome;
+  }
+
+  String get getSobrenome {
+    return this.sobrenome;
   }
 }
 
-class Departamento extends Funcionarios {
-  late String funcao = "Serviços Gerais";
-  Departamento(String nome1) : super.cadastrar(nome1);
-}
-
-void main() {
-  var departamento = Departamento("Liedson");
-  print(departamento.funcao);
+void main() {}
+void alugar() {
+  Aluguel aluguel = Aluguel();
+  aluguel.setNome = "Liedson";
+  aluguel.setSobrenome = "Rocha";
+  print(aluguel.getNome);
+  print(aluguel.getSobrenome);
 }

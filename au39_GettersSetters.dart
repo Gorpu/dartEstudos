@@ -5,12 +5,12 @@ class Passageiros {
 
   Passageiros(this.nome, this.sobrenome, this.cpf);
 
-  /*getter explicto*/
+  /*setter explicito */
   set setNome(String nome) {
     this.nome = nome;
   }
 
-  /*setter explicito */
+  /*getter explicito*/
   String get getNome {
     return this.nome;
   }
