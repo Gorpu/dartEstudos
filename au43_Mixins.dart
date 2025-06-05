@@ -4,7 +4,8 @@ abstract class KambanRepositoty {
   void AddMercadoria();
   void RemoveMercadoria();
 }
-
+//O mixin pode ser um conjunto de funçoes que podem ser extendidas para outras funções
+//com o with.
 mixin PedidoDeCompraView {
   Map<String, String> _listPedidos = {};
   void VerPedido() {

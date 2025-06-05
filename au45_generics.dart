@@ -1,4 +1,4 @@
-class Comanda<T> {
+abstract class Comanda<T> {
   T? valor;
 
   T? get getByKey {
