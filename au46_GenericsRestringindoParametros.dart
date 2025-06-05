@@ -49,4 +49,5 @@ void main() {
   var addEan = ProdutosEan();
   addEan.addProduto(235);
   print("Nome: ${addNome}\nCodigo${addEan.Ean}");
+  /**1 623 794 741 */
 }
