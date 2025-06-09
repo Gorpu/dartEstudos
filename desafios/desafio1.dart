@@ -14,8 +14,8 @@ List<dynamic> valoresDiversos = [
   "Lula",
   "Bolsonaro",
   intIsNotNum,
-  numIsNotInt,
   numIsBool,
+  numIsNotInt,
   objectIsString,
   boolIsString,
 ];
@@ -31,7 +31,7 @@ List<String> stringsListOrdenada = [...stringsList]..sort();
 List<bool> boolListTrue = [];
 List<bool> boolListFalse = [];
 
-//Variaveis bools
+//Variaveis bools verificação de tipo
 bool intIsNotNum = int is! num;
 bool numIsNotInt = num is! int;
 bool numIsBool = num is bool;
@@ -86,7 +86,7 @@ Map<String, dynamic> processarListaMista(List<dynamic> lista) {
     "somaNumeros": contadorNum,
     "Soma int": contadorInt,
     "Soma double": contadorDouble,
-    "Strigs Concatenadas (Candidatos Presidencia)":
+    "Strings Concatenadas (Candidatos Presidencia)":
         "${stringsList[0]}, " + "${stringsList[1]}, " + "${stringsList[2]}, ",
     "Contagem True": boolListTrue.length,
     "Contagem False": boolListFalse.length,
