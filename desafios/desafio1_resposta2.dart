@@ -1,3 +1,5 @@
+import '../au6_Modificador Late.dart';
+
 Map<String, dynamic> processarListaMista(List<dynamic> lista) {
   List<dynamic> valoresDiversosOrdenados = [];
   //Separadores
@@ -11,25 +13,23 @@ Map<String, dynamic> processarListaMista(List<dynamic> lista) {
       numList.add(item);
     } else if (item is String) {
       stringsList.add(item);
-    } else if (item is bool && item == true) {
-      boolListTrue.add(item);
-    } else if (item is bool && item == false) {
-      boolListFalse.add(item);
+    } else if (item is bool) {
+      boolsList.add(item);
     }
   }
+  boolsList = [
+    ...boolsList.where((valor) => valor == false),
+    ...boolsList.where((valor) => valor == true),
+  ];
+
   //Aqui eu organizei a lista
-  valoresDiversosOrdenados.addAll([
-    ...numList..sort(),
-    ...stringsList..sort(),
-    ...boolListFalse,
-    ...boolListTrue,
-  ]);
+  valoresDiversosOrdenados.add(boolsList);
 
   mapListaMista = {
     /**n1 é o "acumulador" funciona como contador interno e o n2 seria o proximo valor da lista*/
     "somaNumeros": numList.reduce((n1, n2) => n1 + n2),
     "textoConcatenado": '"${stringsList.join(' ')}"',
-    "totalTrue": boolListTrue.length,
+    "totalTrue": boolsList,
     "listaOrdenada": valoresDiversosOrdenados,
   };
   return mapListaMista;
@@ -42,6 +42,7 @@ void main() {
     10,
     "Olá",
     true,
+    false,
     false,
     true,
     "Mundo",
