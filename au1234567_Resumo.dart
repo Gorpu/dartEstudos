@@ -1,29 +1,11 @@
-class Aluguel {
-  late String nome;
-  late String sobrenome;
-
-  String get getNome {
-    return this.nome;
+void main() async {
+  try {
+    final resposta1 = await Future.value(6);
+    final resposta2 = await Future.value(2);
+    print(resposta2 + resposta1);
+  } catch (e) {
+    print("Ocorreu um erro: $e");
+  } finally {
+    print("Processo foi finalizado");
   }
-
-  set setNome(String nome) {
-    this.nome = nome;
-  }
-
-  set setSobrenome(String sobrenome) {
-    this.sobrenome = sobrenome;
-  }
-
-  String get getSobrenome {
-    return this.sobrenome;
-  }
-}
-
-void main() {}
-void alugar() {
-  Aluguel aluguel = Aluguel();
-  aluguel.setNome = "Liedson";
-  aluguel.setSobrenome = "Rocha";
-  print(aluguel.getNome);
-  print(aluguel.getSobrenome);
 }

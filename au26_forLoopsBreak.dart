@@ -11,14 +11,4 @@ void main() {
     }
     ;
   }
-  void CarrosForEach() {
-    carros.forEach((nome) {
-      print("Modelos: $nome");
-    });
-  }
-
-  void CarrosForEach2() {
-    print("*" * 20 + "\nTodos os Carros\n" + "*" * 20);
-    carros.forEach(print);
-  }
 }
