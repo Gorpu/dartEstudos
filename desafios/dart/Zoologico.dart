@@ -1,11 +1,9 @@
 void main() {
-  List<Animal> listAnimais = [Cachorro(), Gato(), Vaca()];
-  listAnimais.forEach((sonsAnimais) {
-    print("*" * 10);
-    for (int i = 0; i <= 2; i++) {
-      sonsAnimais.fazerSom();
-    }
-  });
+  List<Animal> listAnimal = [Cachorro(), Gato(), Vaca()];
+
+  for (Animal animal in listAnimal) {
+    animal.fazerSom();
+  }
 }
 
 abstract class Animal {

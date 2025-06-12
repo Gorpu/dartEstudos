@@ -9,5 +9,5 @@ void main() {
 
 void JoinString() {
   var listDynamic = [1, 2, "Mundo"];
-  print(listDynamic.join(" - "));
+  print(listDynamic.join(" "));
 }

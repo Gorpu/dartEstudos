@@ -2,7 +2,6 @@ Map<String, dynamic> processarListaMista(List<dynamic> lista) {
   List<dynamic> valoresDiversosOrdenados = [];
   List<num> numList = [];
   List<String> stringsList = [];
-  List<String> stringsListOrdenada = [];
   List<bool> boolsList = [];
 
   Map<String, dynamic> mapListaMista = {};
@@ -12,18 +11,17 @@ Map<String, dynamic> processarListaMista(List<dynamic> lista) {
       numList.sort();
     } else if (item is String) {
       stringsList.add(item);
-      stringsListOrdenada.add(item);
-      stringsListOrdenada.sort();
+      //stringsListOrdenada.add(item);
+      //stringsListOrdenada.sort();
     } else if (item is bool) {
       boolsList.add(item);
     }
   }
-  boolsList = [
-    ...boolsList.where((valor) => valor == false),
-    ...boolsList.where((valor) => valor == true),
-  ];
+  boolsList.forEach((v) => boolsList.where((valor) => valor == false));
+  boolsList.forEach((v) => boolsList.where((valor) => valor == true));
+  boolsList.sort((a, b) => b ? 1 : -1);
   valoresDiversosOrdenados.addAll(numList);
-  valoresDiversosOrdenados.addAll(stringsListOrdenada);
+  //valoresDiversosOrdenados.addAll(//stringsListOrdenada);
   valoresDiversosOrdenados.addAll(boolsList);
 
   mapListaMista = {

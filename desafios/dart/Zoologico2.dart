@@ -1,120 +1,56 @@
+import 'Animal.dart';
+
 void main() {
-  List<Animal> listAnimais = [
+  List<Animal> animais = [
     Cachorro(4, "Predador"),
     Gato(2, "Chubinho"),
     Vaca(2, "Táis"),
+    Cachorro(4, "Cuscuz"),
+    Gato(7, "Frajola"),
   ];
-  listAnimais.forEach((a) {
+
+  for (Animal animal in animais) {
     print("*" * 20);
-    a.apresentar();
-    a.fazerSom();
-  });
-}
-
-abstract class Animal {
-  String _nome;
-  int _idade;
-
-  Animal(this._idade, this._nome);
-
-  set setNome(String nome);
-  set setIdade(int idade);
-
-  get getNome;
-  get getIdade;
-
-  void fazerSom();
-
-  void apresentar() {
-    print("Nome .. Idade ..");
+    animal.apresentar();
+    animal.fazerSom();
   }
 }
 
 class Cachorro extends Animal {
   Cachorro(int idade, String nome) : super(idade, nome);
 
-  @override
-  set setNome(String nome) {
-    this._nome = nome;
-  }
-
-  set setIdade(int idade) {
-    this._idade = idade;
-  }
-
-  get getNome {
-    return this._nome;
-  }
-
-  get getIdade {
-    return this._idade;
+  void fazerSom() {
+    print("Au Au!!!");
   }
 
   @override
   void apresentar() {
     print("Nome $getNome, Idade $getIdade");
-  }
-
-  void fazerSom() {
-    print("Au Au!!!");
   }
 }
 
 class Gato extends Animal {
   Gato(int idade, String nome) : super(idade, nome);
 
-  @override
-  set setNome(String nome) {
-    this._nome = nome;
-  }
-
-  set setIdade(int idade) {
-    this._idade = idade;
-  }
-
-  get getNome {
-    return this._nome;
-  }
-
-  get getIdade {
-    return this._idade;
+  void fazerSom() {
+    print("Miau!!!");
   }
 
   @override
   void apresentar() {
     print("Nome $getNome, Idade $getIdade");
-  }
-
-  void fazerSom() {
-    print("Miau!!!");
   }
 }
 
 class Vaca extends Animal {
   Vaca(int idade, String nome) : super(idade, nome);
-  @override
-  set setNome(String nome) {
-    this._nome = nome;
-  }
 
-  set setIdade(int idade) {
-    this._idade = idade;
-  }
-
-  get getNome {
-    return this._nome;
-  }
-
-  get getIdade {
-    return this._idade;
+  void fazerSom() {
+    print("Muuu Muuuuuu!!!");
   }
 
   @override
   void apresentar() {
     print("Nome $getNome, Idade $getIdade");
-  }
-
-  void fazerSom() {
-    print("Muuu Muuuuuu!!!");
   }
 }
