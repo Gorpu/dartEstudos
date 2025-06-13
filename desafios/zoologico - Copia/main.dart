@@ -17,7 +17,6 @@ void main() {
     String? idade = stdin.readLineSync();
     int idadeParseada;
     try {
-      print(idade?.isEmpty);
       idadeParseada = int.parse(idade ?? "0");
     } catch (e) {
       print(e);

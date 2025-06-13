@@ -1,7 +1,4 @@
-from flask import Flask
+from tkinter import Tk
 
-app = Flask(__name__)
-
-@app.route("/")
-def hello_world():
-    return "<p>Hello, World!</p>"
+janela = Tk()
+janela.mainloop()
